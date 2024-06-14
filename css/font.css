@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "Menco-Bold";
+  src: url(../font/Menco-Bold.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Menco-Medium";
+  src: url(../font/Menco-Medium.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Menco-Black";
+  src: url(../font/Menco-Black.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TTTrailers-Black";
+  src: url(../font/TTTrailers-Black.woff2) format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
