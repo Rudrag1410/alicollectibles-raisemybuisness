@@ -1165,7 +1165,9 @@ footer .bottom {
 }
 @media screen and (max-width: 822.8571428571px) {
   footer .bottom {
+    margin: 0 auto;
     margin-bottom: 20px;
+    width: 80%;
   }
 }
 footer .pengu-logo {
@@ -1225,28 +1227,28 @@ footer .images {
     margin-bottom: 35px;
   }
 }
-footer .images svg {
+footer .images img {
   display: flex;
   width: 9.7222222222vw;
   height: 10vw;
 }
 @media screen and (min-width: 1584px) {
-  footer .images svg {
+  footer .images img {
     width: 154px;
   }
 }
 @media screen and (max-width: 977.1428571429px) {
-  footer .images svg {
+  footer .images img {
     width: 95px;
   }
 }
 @media screen and (min-width: 1584px) {
-  footer .images svg {
+  footer .images img {
     height: 158.4px;
   }
 }
 @media screen and (max-width: 1400px) {
-  footer .images svg {
+  footer .images img {
     height: 140px;
   }
 }
@@ -1462,12 +1464,10 @@ footer .utility-links {
   display: flex;
   width: 90%;
   max-width: 1340px;
-
-  justify-content: space-between;
+  justify-content: center;
   position: relative;
   z-index: 4;
 }
-footer .utility-links a,
 footer .utility-links p {
   color: #80abff;
   text-align: center;
@@ -1478,9 +1478,7 @@ footer .utility-links p {
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
 }
-html:not(.touch) footer .utility-links a:hover {
-  color: #c5fbff;
-}
+
 footer .footer-address {
   color: #e9f7fb;
   text-align: center;
@@ -1538,12 +1536,9 @@ html:not(.touch) footer .footer-address:hover {
     font-size: 12px;
     line-height: 1;
   }
-  footer .bottom {
-    max-width: 99%;
-  }
-  footer .images svg {
-    width: 78px;
-    height: 81px;
+  footer .images img {
+    width: 65px;
+    height: 71px;
   }
   footer .links {
     justify-content: flex-start;
@@ -1564,8 +1559,5 @@ html:not(.touch) footer .footer-address:hover {
   }
   footer .utility-links p {
     width: 100%;
-  }
-  footer .utility-links a:last-of-type {
-    display: none;
   }
 }

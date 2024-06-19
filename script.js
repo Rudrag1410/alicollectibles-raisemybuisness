@@ -24,7 +24,7 @@ window.onload = function () {
    // Start the scrolling animation for footer-marquee
    gsap.to(".footer-marquee", {
       xPercent: -20,
-      duration: 15, // Longer duration for slower effect
+      duration: 15,
       ease: "linear",
       repeat: -1,
    });
@@ -37,8 +37,27 @@ window.onload = function () {
 
 document.addEventListener('DOMContentLoaded', function () {
    var navIcon = document.getElementById('humBurgerIcon');
+   var expandedMenu = document.getElementById('expandedMenu');
+
    navIcon.addEventListener('click', function () {
       navIcon.classList.toggle('open');
+      expandedMenu.classList.toggle('open');
+   });
+
+
+
+
+
+
+   document.getElementById('humBurgerIcon').addEventListener('click', function () {
+      var overlay = document.getElementById('menuOverlay');
+      if (overlay.classList.contains('hidden')) {
+         overlay.classList.remove('hidden');
+         overlay.classList.add('shown');
+      } else {
+         overlay.classList.remove('shown');
+         overlay.classList.add('hidden');
+      }
    });
 });
 
