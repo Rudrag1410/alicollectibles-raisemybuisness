@@ -16,8 +16,6 @@ window.onload = function () {
 
    // Setup for footer-marquee
    const footerMarquee = document.querySelector('.footer-marquee');
-   const footerContentClone = footerMarquee.innerHTML;
-   footerMarquee.innerHTML += footerContentClone;
 
    gsap.set(".footer-marquee", { xPercent: 5 });
 
@@ -43,40 +41,5 @@ document.addEventListener('DOMContentLoaded', function () {
       navIcon.classList.toggle('open');
       expandedMenu.classList.toggle('open');
    });
-
-
-
-
-
-
-   document.getElementById('humBurgerIcon').addEventListener('click', function () {
-      var overlay = document.getElementById('menuOverlay');
-      if (overlay.classList.contains('hidden')) {
-         overlay.classList.remove('hidden');
-         overlay.classList.add('shown');
-      } else {
-         overlay.classList.remove('shown');
-         overlay.classList.add('hidden');
-      }
-   });
 });
 
-
-
-
-window.onscroll = function () { myFunction() };
-
-// Get the header
-var header = document.getElementById("myHeader");
-
-// Get the offset position of the navbar
-var sticky = header.offsetTop;
-
-// Add the sticky class to the header when you reach its scroll position. Remove "sticky" when you leave the scroll position
-function myFunction() {
-   if (window.pageYOffset > sticky) {
-      header.classList.add("sticky");
-   } else {
-      header.classList.remove("sticky");
-   }
-}
