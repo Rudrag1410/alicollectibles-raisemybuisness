@@ -131,7 +131,7 @@ img {
   font-family: Menco-Black, sans-serif;
   font-size: 18px;
   line-height: 1.48;
-  letter-spacing: 0.18px;
+  letter-spacing: 0.8px;
   color: #00142d;
   white-space: nowrap;
   margin-left: 24px;
@@ -516,7 +516,7 @@ html:not(.touch) .pink-btn:hover:before {
     height: 62px;
   }
   .pink-btn span:not(.tag) {
-    font-size: 30px;
+    font-size: 28px;
     text-shadow: -2px 2px #00142d;
     line-height: 0.8;
     letter-spacing: -1px;
