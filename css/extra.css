@@ -1029,8 +1029,8 @@ footer .top-block .img-wrapper {
 }
 footer .top-block .img-wrapper img {
   height: 4.1666666667vw;
+  border-radius: 50%;
   width: auto;
-
   display: flex;
 }
 @media screen and (min-width: 1584px) {
