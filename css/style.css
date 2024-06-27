@@ -80,12 +80,12 @@ img {
 
 .logo {
   width: 160px;
-  height: 100%;
+  height: auto;
 }
 .logo img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .heroSection {
@@ -95,7 +95,7 @@ img {
   border-bottom: 2px solid #00142d;
   position: relative;
   padding-bottom: 50px;
-  height: 100vh;
+  height: fit-content;
 }
 
 .announcementBar {
@@ -208,8 +208,6 @@ img {
   fill: #477dfd;
 }
 
-/* CSS for mobile header */
-/* CSS for mobile header */
 .humBurger {
   z-index: 1001;
 }
@@ -247,8 +245,7 @@ img {
 
 .expandedMenu {
   position: absolute;
-  top: 9px;
-  left: 20px;
+  top: 6px;
   width: 45px;
   height: 41px;
   background: #fff;
@@ -266,7 +263,7 @@ img {
   width: 90%;
   height: fit-content;
   z-index: 1000;
-  padding-bottom: 50px;
+  padding-bottom: 35px;
 }
 
 .expandedMenuContent {
@@ -286,7 +283,7 @@ img {
   margin-top: 50px;
 }
 .menuLink {
-  font-size: 54px;
+  font-size: 42px;
   width: auto;
 }
 
@@ -305,6 +302,8 @@ img {
 .view-home section {
   position: relative;
   z-index: 3;
+  display: flex;
+  flex-direction: column;
 }
 .view-home:before {
   position: absolute;
@@ -421,7 +420,7 @@ html:not(.touch) .pink-btn:hover:before {
 
 .hero-wrapper {
   display: flex;
-  margin-top: 220px;
+  margin-top: 120px;
   justify-content: space-between;
   height: 100%;
   overflow: hidden;
@@ -447,7 +446,7 @@ html:not(.touch) .pink-btn:hover:before {
   -webkit-text-stroke: 1px #00142d;
   text-stroke: 1px #00142d;
   font-family: TTTrailers-Black, serif;
-  font-size: 40px;
+  font-size: 55px;
   line-height: 0.91;
   letter-spacing: -2px;
   text-transform: uppercase;
@@ -486,6 +485,11 @@ html:not(.touch) .pink-btn:hover:before {
   flex-direction: column;
   gap: 20px;
 }
+.newsletterContainer .subheading {
+  display: inline-block;
+  background-color: black;
+  color: #fff;
+}
 .newsletter {
   display: flex;
   flex-direction: column;
@@ -493,13 +497,15 @@ html:not(.touch) .pink-btn:hover:before {
   margin-bottom: 20px;
 }
 .newsletter input {
-  width: 100%;
+  width: 97%;
   overflow: hidden;
   height: 50px;
   border-radius: 10px;
   font-size: 16px;
   border: 0;
+  padding-left: 3%;
   outline: 0;
+  font-family: Menco-Black, sans-serif;
 }
 .newsletter button {
   width: 100%;
@@ -561,5 +567,10 @@ html:not(.touch) .pink-btn:hover:before {
   }
   .newsletter button {
     width: 80%;
+  }
+}
+@media screen and (min-width: 767px) {
+  .logo {
+    width: 200px;
   }
 }
