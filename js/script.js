@@ -26,12 +26,7 @@ window.onload = function () {
       ease: "linear",
       repeat: -1,
    });
-};
-
-
-
-
-
+}
 
 document.addEventListener('DOMContentLoaded', function () {
    var navIcon = document.getElementById('humBurgerIcon');
@@ -43,3 +38,36 @@ document.addEventListener('DOMContentLoaded', function () {
    });
 });
 
+
+
+document.addEventListener('DOMContentLoaded', (event) => {
+   const popup = document.querySelector('.popup');
+   const openPopupBtns = document.querySelectorAll('.openPopupBtn');
+   const closePopupBtn = document.querySelector('.closePopupBtn');
+
+   function openPopup() {
+      popup.style.display = 'block';
+   }
+
+   function closePopup() {
+      popup.style.display = 'none';
+   }
+
+   // Open popup when any open button is clicked
+   openPopupBtns.forEach((btn) => {
+      btn.addEventListener('click', openPopup);
+   });
+
+   // Close popup when the close button is clicked
+   closePopupBtn.addEventListener('click', closePopup);
+
+   // Open popup after 30 seconds
+   setTimeout(openPopup, 30000);
+
+   // Close popup if user clicks outside of it
+   window.addEventListener('click', (event) => {
+      if (event.target == popup) {
+         closePopup();
+      }
+   });
+});

@@ -3,6 +3,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   position: relative;
+  scroll-behavior: smooth;
 }
 a {
   text-decoration: none;
@@ -465,7 +466,6 @@ html:not(.touch) .pink-btn:hover:before {
   flex-direction: column;
   gap: 10px;
   text-align: center;
-  max-width: 320px;
   margin: 0 auto;
   margin-bottom: 20px;
 }
@@ -486,9 +486,7 @@ html:not(.touch) .pink-btn:hover:before {
   gap: 20px;
 }
 .newsletterContainer .subheading {
-  display: inline-block;
-  background-color: black;
-  color: #fff;
+  color: #000;
 }
 .newsletter {
   display: flex;
@@ -512,7 +510,160 @@ html:not(.touch) .pink-btn:hover:before {
   height: 50px;
   border-radius: 10px;
 }
+footer .heading {
+  display: inline-block;
+  padding-top: 40px;
+  padding-bottom: 30px;
+}
+.contact-container,
+.modal-container {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 13px;
+  border: 2px solid #00142d;
+  box-shadow: 4px 4px 0 0 rgba(0, 0, 0, 0.25);
+}
+.modal-container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  z-index: 1000;
+  width: 90%;
+  transform: translate(-50%, -50%);
+  max-height: 90vh;
+  overflow: scroll;
+  max-width: 1084px;
+}
+
 @media screen and (min-width: 767px) {
+  .modal-container {
+    min-height: 450px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .modal-container .contact-image {
+    width: 60%;
+  }
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1000000000000000000000000;
+}
+
+.closePopupBtn {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  cursor: pointer;
+}
+.contact-image {
+  display: none;
+}
+
+.contact-form {
+  width: 100%;
+  height: 100%;
+  padding: 50px 10px;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #c1ecff,
+    #c1ecff 25%,
+    #fff 38.17%,
+    #c2ecff 60.83%,
+    #c1ecff
+  );
+}
+
+.contact-form label {
+  color: #00142d;
+  font-size: 16px;
+  padding: 0 0 8px 20px;
+  display: block;
+  white-space: nowrap;
+  font-family: Menco-Medium, sans-serif;
+  text-align: start;
+}
+
+.contact-form input,
+.contact-form textarea {
+  color: #00142d;
+  font-size: 16px;
+  line-height: 1.45;
+  text-transform: uppercase;
+  border-radius: 29px;
+  border: 1px solid #00142d;
+  background: #fff;
+  box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.25);
+  outline: none;
+  margin-bottom: 24px;
+  padding: 16px 24px;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: Menco-Medium, sans-serif;
+}
+
+.contact-form textarea {
+  min-height: 110px;
+}
+
+.contact-form input::placeholder,
+.contact-form textarea::placeholder {
+  color: #00142d;
+  font-family: Menco-Medium, sans-serif;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.contact-form .pink-btn {
+  margin: 0 auto;
+  width: 100%;
+}
+
+.contact-form .subheading {
+  font-size: 30px;
+  margin-bottom: 24px;
+  margin-top: 6px;
+}
+
+@media screen and (min-width: 767px) {
+  .contact-form .subheading {
+    margin-top: 40px;
+  }
+}
+.contact-form .pink-btn span {
+  font-size: 50px !important;
+}
+.inputGroup {
+  display: block;
+}
+
+@media screen and (min-width: 767px) {
+  .inputGroup {
+    display: flex;
+    gap: 10px;
+  }
+  .contact-image {
+    display: block;
+    width: 40%;
+    background: url("../assets/images/latest.jpg") no-repeat center center/cover;
+  }
+  .contact-form {
+    width: 60%;
+    padding: 40px 20px;
+  }
   .announcementLink {
     font-size: 18px;
     margin-left: 40px;
@@ -558,7 +709,7 @@ html:not(.touch) .pink-btn:hover:before {
     letter-spacing: -1.4px;
   }
   .pudgy-sale {
-    padding: 40px 0;
+    padding: 60px 0;
   }
   .newsletter {
     width: 100%;
@@ -568,9 +719,18 @@ html:not(.touch) .pink-btn:hover:before {
   .newsletter button {
     width: 80%;
   }
+  footer .heading {
+    padding: 20px 0;
+  }
 }
 @media screen and (min-width: 767px) {
   .logo {
     width: 200px;
   }
+}
+
+.modal-title {
+  font-size: 30px;
+  color: #00142d;
+  margin-bottom: 10px;
 }

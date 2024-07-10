@@ -1,0 +1,108 @@
+.comic-museum-header .announcementBar {
+  margin-bottom: 0;
+}
+.comic-museum-header #myHeader {
+  top: 60px;
+}
+
+.topContainer {
+  margin-top: 150px;
+  margin-bottom: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  width: 100%;
+}
+.divider {
+  width: 100%;
+  height: 1px;
+  background-color: gray;
+}
+.comics {
+  width: 100%;
+}
+
+.comic {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-top: 1px solid gray;
+  padding: 15px 0;
+}
+
+.comic img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.comic-museum-content {
+  margin: 30px 0;
+}
+
+.comic-museum-content .card-wrapper .pink-btn span:not(.tag) {
+  font-size: 30px;
+}
+.comic-museum-content .card-content .heading {
+  margin-bottom: 20px;
+}
+
+@media screen and (min-width: 767px) {
+  .topContainer {
+    flex-direction: row;
+  }
+  .comics {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  .comic-museum-content {
+    margin: 50px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+  }
+  .comic-museum-content .card-wrapper {
+    height: 500px;
+    margin-bottom: 0px;
+  }
+  .comic-museum-content .card-content {
+    flex: 1;
+  }
+}
+
+.comic-museum-content .card-wrapper {
+  width: 270px;
+  margin-bottom: 30px;
+}
+
+@media screen and (max-width: 375px) {
+  .comic-museum-content .card-wrapper {
+    width: 100%;
+    height: 500px;
+  }
+}
+
+@media screen and (min-width: 374px) and (max-width: 467px) {
+  .comic-museum-content {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+  }
+  .comic-museum-content .card-wrapper {
+    width: 85%;
+  }
+}
+@media screen and (min-width: 467px) and (max-width: 768px) {
+  .comic-museum-content .card-wrapper {
+    width: calc(100% / 2 - 30px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .comic-museum-content .card-wrapper {
+    width: 300px;
+  }
+}
