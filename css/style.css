@@ -474,7 +474,7 @@ html:not(.touch) .pink-btn:hover:before {
 }
 #myHeader {
   position: fixed;
-  top: 10;
+  top: 52px;
   width: auto;
   min-width: 90%;
   z-index: 9999999999999999999999999;
